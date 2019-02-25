@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <RootNamespace>AspNet.WebApi</RootNamespace>
+    <IsPackable>True</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>$(TargetFrameworks);net472</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json" copyToOutput="true" includeInPackage="false" />
+    <Content Include="nswag.json" includeInPackage="false" />
+  </ItemGroup>
+  <Target Name="SetTeamcityBuildNumber" BeforeTargets="BeforeBuild">
+    <Message Text="##teamcity[buildNumber '$(PackageVersion)']" Importance="high" />
+  </Target>
+</Project>
