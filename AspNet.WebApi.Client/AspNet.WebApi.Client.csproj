@@ -4,9 +4,6 @@
     <RootNamespace>AspNet.WebApi</RootNamespace>
     <IsPackable>True</IsPackable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-    <TargetFrameworks>$(TargetFrameworks);net472</TargetFrameworks>
-  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
@@ -17,7 +14,4 @@
     <Content Include="appsettings.json" copyToOutput="true" includeInPackage="false" />
     <Content Include="nswag.json" includeInPackage="false" />
   </ItemGroup>
-  <Target Name="SetTeamcityBuildNumber" BeforeTargets="BeforeBuild">
-    <Message Text="##teamcity[buildNumber '$(PackageVersion)']" Importance="high" />
-  </Target>
 </Project>
