@@ -11,9 +11,12 @@ namespace AspNet.WebApi
         public readonly string ProductName = $"{Assembly.GetExecutingAssembly().GetName().Name}";
         public readonly string ProductVersion = $"{Assembly.GetExecutingAssembly().GetName().Version}";
 
+        public Action<HttpRequestHeaders> SetCustomHeadersAction { get; set; }
+
         public ClientBase(Configuration configuration)
         {
             Configuration = configuration;
+            SetCustomHeadersAction = (headers) => { };
         }
 
         public virtual void PrepareRequest(HttpClient client, HttpRequestMessage request, string url)
@@ -32,7 +35,5 @@ namespace AspNet.WebApi
         }
 
         public virtual void ProcessResponse(HttpClient client, HttpResponseMessage response) { }
-
-        public Action<HttpRequestHeaders> SetCustomHeadersAction = (headers) => { };
     }
 }
