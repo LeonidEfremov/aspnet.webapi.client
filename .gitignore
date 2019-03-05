@@ -202,3 +202,5 @@ ModelManifest.xml
 
 # IDEA ide
 .idea/
+
+coverage.opencover.xml
