@@ -10,12 +10,12 @@
   </PropertyGroup>
   <PropertyGroup Label="Package">
     <ApplicationVersion>$(Version)</ApplicationVersion>
-    <VersionPrefix>1.0.8</VersionPrefix>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <PackageOutputPath>$(SolutionDir).packages</PackageOutputPath>
     <Authors>Leonid Efremov</Authors>
     <PackageVersion>$(Version)</PackageVersion>
-    <PackageTags>crypterium;api;client;</PackageTags>
+    <PackageTags>api;client;</PackageTags>
     <IncludeSymbols>False</IncludeSymbols>
   </PropertyGroup>
 </Project>
