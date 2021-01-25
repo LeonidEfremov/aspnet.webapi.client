@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
     <IsPackable>False</IsPackable>
     <RootNamespace>AspNet.WebApi.Tests</RootNamespace>
   </PropertyGroup>
@@ -8,7 +8,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" PrivateAssets="all" />
-    <PackageReference Include="xUnit.Asserts.Compare" Version="1.0.0.5" />
+    <PackageReference Include="CompareNETObjects" Version="4.71.0" />
     <PackageReference Include="coverlet.msbuild" Version="3.0.2" />
   </ItemGroup>
   <ItemGroup>
