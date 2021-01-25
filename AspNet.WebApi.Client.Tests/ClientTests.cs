@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using KellermanSoftware.CompareNetObjects;
 using Xunit;
-using Xunit.Asserts.Compare;
 
 namespace AspNet.WebApi.Tests
 {
