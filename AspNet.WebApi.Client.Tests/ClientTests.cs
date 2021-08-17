@@ -51,7 +51,7 @@ namespace AspNet.WebApi.Tests
 
             _client.PrepareRequest(httpClient, null, null);
 
-            Assert.Equal("AspNet.WebApi.Client/1.3.0.0", httpClient.DefaultRequestHeaders.UserAgent.Single().ToString());
+            Assert.Equal("AspNet.WebApi.Client/1.4.0.0", httpClient.DefaultRequestHeaders.UserAgent.Single().ToString());
             Assert.Equal("http://localhost/", httpClient.BaseAddress.ToString());
             Assert.Equal("Value", httpClient.DefaultRequestHeaders.GetValues("X-Custom-Header").SingleOrDefault());
         }
