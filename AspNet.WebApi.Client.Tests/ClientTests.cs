@@ -41,7 +41,7 @@ namespace AspNet.WebApi.Tests
         [Fact]
         public void ProductVersion()
         {
-            Assert.Equal("1.3.0.0", _client.ProductVersion);
+            Assert.Equal("1.4.0.0", _client.ProductVersion);
         }
 
         [Fact]
